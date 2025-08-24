@@ -1,0 +1,11 @@
+{
+    "routes": 
+    [
+        {
+            "nom": "test",
+            "path": "/test",
+            "controller": "\\App\\Controllers\\TestController",
+            "method": "test"
+        }
+    ]
+}
