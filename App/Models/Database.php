@@ -1,9 +1,13 @@
-<?
+<?php
 
+namespace App\Models;
+
+use PDO;
+use PDOException;
 
 class Database
 {
-    private  string $DATABASE_ADRESS = "";
+    private static string $DATABASE_ADRESS = "";
     private static string $DATABASE_NAME = "";
     private static string $DATABASE_USERNAME = "";
     private static string $DATABASE_PASSWORD = "";
@@ -27,19 +31,15 @@ class Database
         }
 
         return true;
-
     }
 
-    public static function getInstance() : PDO | null
+    public static function getInstance(): ?PDO
     {
-        if(!isset(Database::$connexion))
-        {
-            return Database::$connexion;
+        if(!isset(self::$connexion))
+        {     
+            self::Init();
         }
 
-        return null;
+        return self::$connexion;
     }
 }
-
-
-?>

@@ -2,10 +2,10 @@
     "routes": 
     [
         {
-            "nom": "test",
-            "path": "/test",
-            "controller": "\\App\\Controllers\\TestController",
-            "method": "test"
+            "nom": "createUser",
+            "path": "/createUser",
+            "controller": "\\App\\Controllers\\UserController",
+            "method": "createUser"
         }
     ]
 }
